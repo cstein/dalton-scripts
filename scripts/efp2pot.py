@@ -64,7 +64,7 @@ def quadrupoles(line):
     label = labelize(data[0])
     return (label[0], label[1], map(float, data[1:]))
 
-def octupoles(line):
+def octopoles(line):
     """data comes in in multiple rows, parse it and
        remove stuff we do not need
     """
@@ -111,7 +111,7 @@ keys = {'COORDINATES':(coordinates, 1),
         'MONOPOLES':(monopole,1),
         'DIPOLES':(dipole,1),
         'QUADRUPOLES':(quadrupoles,2),
-        'OCTUPOLES':(octupoles,3),
+        'OCTUPOLES':(octopoles,3),
         'POLARIZABLE POINT':(polarizable_point,4)}
 values = {}
 for key in keys:
@@ -161,7 +161,7 @@ def dump_pe_potential():
        2nd is monopoles
        3rd is dipoles
        4th is quadrupoles
-       5th is octupoles
+       5th is octopoles
        6th is alphas (symmetric!)
        7th is exclusion list
     """
@@ -204,7 +204,7 @@ def dump_pe_potential():
             print " %20.12f" % (item),
         print
 
-    print "octupoles"
+    print "octopoles"
     print "%i" % nat
     for idx in atomids:
         data = values['OCTUPOLES'][idx]
