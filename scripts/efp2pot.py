@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Converts an EFP potential to the corresponding
    Polarizable Embedding potential
 """
