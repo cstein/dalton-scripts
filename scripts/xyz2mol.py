@@ -5,7 +5,7 @@ import argparse
 def parse_arguments():
     parser = argparse.ArgumentParser(description='converts an xyz file to a DALTON mol-file', prog="xyz2mol", usage="xyz2mol <xyzfile> [options]")
     parser.add_argument('--version', action='version', version='%(prog)s 0.2')
-    parser.add_argument('input', help="XYZ filename. Can use stdin.",type=argparse.FileType('r'))
+    parser.add_argument('input', help="XYZ filename.",type=argparse.FileType('r'))
     parser.add_argument('-b', '--basis', help='Basis Set. Default is 3-21G', action='store', default="3-21G")
     parser.add_argument('-f', '--firsttitle', help='First title line', action='store', default="title line 1")
     parser.add_argument('-s', '--secondtitle', help='Second title line', action='store', default="title line 2")
